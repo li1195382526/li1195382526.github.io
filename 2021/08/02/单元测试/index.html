@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>单元测试 | 小小菜鸟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="1.package文件配置项">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单元测试">
+<meta property="og:url" content="http://example.com/2021/08/02/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="小小菜鸟的博客">
+<meta property="og:description" content="1.package文件配置项">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-02T14:24:23.000Z">
+<meta property="article:modified_time" content="2021-08-02T14:34:03.993Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="小小菜鸟的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-单元测试" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      单元测试
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2021/08/02/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time datetime="2021-08-02T14:24:23.000Z" itemprop="datePublished">2021-08-02</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>1.package文件配置项</p>
+<span id="more"></span>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;epanel&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;epanel front&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;jest --colors --coverage&quot;</span>,</span><br><span class="line">    <span class="string">&quot;test:ci&quot;</span>: <span class="string">&quot;cross-env NODE_ENV=test cross-env NODE_PATH=./app mocha --compilers js:babel-register -r app/spec/support/setup.mocha.js --recursive &#x27;app/spec/**/*.test.js&#x27;&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;engines&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;node&quot;</span>: <span class="string">&quot;8.16.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;npm&quot;</span>: <span class="string">&quot;3.8.6&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;MIT&quot;</span>,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">   <span class="string">&quot;jest&quot;</span>: <span class="string">&quot;^20.0.0&quot;</span>,</span><br><span class="line">   <span class="string">&quot;babel-jest&quot;</span>: <span class="string">&quot;^20.0.0&quot;</span>,</span><br><span class="line">   <span class="string">&quot;react-test-renderer&quot;</span>: <span class="string">&quot;^16.12.0&quot;</span>,</span><br><span class="line">   <span class="string">&quot;enzyme-adapter-react-15.4&quot;</span>: <span class="string">&quot;^1.4.1&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;chai&quot;</span>: <span class="string">&quot;^3.3.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;chai-as-promised&quot;</span>: <span class="string">&quot;^5.1.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;enzyme&quot;</span>: <span class="string">&quot;^3.10.0&quot;</span>,</span><br><span class="line">     <span class="string">&quot;mocha&quot;</span>: <span class="string">&quot;^2.4.5&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>2.新建jest.config.js文件(项目根目录下)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// setupFiles：配置文件，在运行测试案例代码之前，Jest会先运行这里的配置文件来初始化指定的测试环境</span></span><br><span class="line"><span class="comment">// moduleFileExtensions：代表支持加载的文件名</span></span><br><span class="line"><span class="comment">// testPathIgnorePatterns：用正则来匹配不用测试的文件</span></span><br><span class="line"><span class="comment">// testRegex：正则表示的测试文件，测试文件的格式为xxx.test.js</span></span><br><span class="line"><span class="comment">// collectCoverage：是否生成测试覆盖报告，如果开启，会增加测试的时间</span></span><br><span class="line"><span class="comment">// collectCoverageFrom：生成测试覆盖报告是检测的覆盖文件</span></span><br><span class="line"><span class="comment">// moduleNameMapper：代表需要被Mock的资源名称</span></span><br><span class="line"><span class="comment">// transform：用babel-jest来编译文件，生成ES6/7的语法</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  setupFiles: [</span><br><span class="line">    <span class="string">&#x27;./test/setup.js&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  moduleFileExtensions: [</span><br><span class="line">    <span class="string">&#x27;js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;jsx&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  testPathIgnorePatterns: [</span><br><span class="line">    <span class="string">&#x27;/node_modules/&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  testRegex: <span class="string">&#x27;.*\\.test\\.js$&#x27;</span>,</span><br><span class="line">  collectCoverage: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">/*collectCoverageFrom: [</span></span><br><span class="line"><span class="comment">    &#x27;app/components/!**!/!*.&#123;js&#125;&#x27;,</span></span><br><span class="line"><span class="comment">  ],*/</span></span><br><span class="line">  moduleNameMapper: &#123;</span><br><span class="line">    <span class="string">&quot;\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$&quot;</span>: <span class="string">&quot;&lt;rootDir&gt;/__mocks__/fileMock.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;\\.(css|less|scss)$&quot;</span>: <span class="string">&quot;&lt;rootDir&gt;/__mocks__/styleMock.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  transform: &#123;</span><br><span class="line">    <span class="string">&quot;^.+\\.js$&quot;</span>: <span class="string">&quot;babel-jest&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>3.新建文件夹test,放入测试文件*.test.js文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; shallow,render,mount &#125; <span class="keyword">from</span> <span class="string">&#x27;enzyme&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> ModifyModal <span class="keyword">from</span> <span class="string">&#x27;../app/containers/WorksAnalyse/tabs/partial/ModifyModal&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> props = &#123;</span><br><span class="line">  list: [<span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;second&#x27;</span>],</span><br><span class="line">  <span class="comment">//deleteTodo: jest.fn(),</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> modifyData = &#123;</span><br><span class="line">  openModify:<span class="literal">false</span>,</span><br><span class="line">  onClose: <span class="function">() =&gt;</span> &#123;&#125;,</span><br><span class="line">  qtnId:<span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*const setup = () =&gt; &#123;</span></span><br><span class="line"><span class="comment">  const wrapper = shallow(&lt;ModifyModal &#123;...modifyData&#125; /&gt;);</span></span><br><span class="line"><span class="comment">  return &#123;</span></span><br><span class="line"><span class="comment">    props,</span></span><br><span class="line"><span class="comment">    wrapper,</span></span><br><span class="line"><span class="comment">  &#125;;</span></span><br><span class="line"><span class="comment">&#125;;*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> setupByRender = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> wrapper = render(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...modifyData</span>&#125; /&gt;</span></span>);</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    props,</span><br><span class="line">    wrapper,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> setupByMount = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> wrapper = mount(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...modifyData</span>&#125; /&gt;</span></span>);</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    props,</span><br><span class="line">    wrapper,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> setup = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> props = &#123;</span><br><span class="line">    openModify:<span class="literal">false</span>,</span><br><span class="line">    onClose: jest.fn(),</span><br><span class="line">    qtnId:<span class="number">0</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> wrapper = shallow(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span>)</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    props,</span><br><span class="line">    wrapper</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">&#x27;数据修改&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; props, wrapper &#125; = setup()</span><br><span class="line">  it(<span class="string">&#x27;ModifyModal find div&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> app = shallow(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...modifyData</span>&#125; /&gt;</span></span>);</span><br><span class="line">    expect(app.find(<span class="string">&#x27;div&#x27;</span>).length).toBe(<span class="number">5</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  it(<span class="string">&#x27;ModifyModal find p&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> app = shallow(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...modifyData</span>&#125; /&gt;</span></span>);</span><br><span class="line">    expect(app.find(<span class="string">&#x27;p&#x27;</span>).length).toBe(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  it(<span class="string">&#x27;ModifyModal find button&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> app = shallow(<span class="xml"><span class="tag">&lt;<span class="name">ModifyModal</span> &#123;<span class="attr">...modifyData</span>&#125; /&gt;</span></span>);</span><br><span class="line">    expect(app.find(<span class="string">&#x27;button&#x27;</span>).length).toBe(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当点击按钮，onClick 方法应该被调用</span></span><br><span class="line">  it(<span class="string">&#x27;click checkbox button, onClick called&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> onClickEvent = &#123;</span><br><span class="line">      key: <span class="string">&#x27;Click&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    wrapper.find(<span class="string">&#x27;.btn-secondary&#x27;</span>).simulate(<span class="string">&#x27;click&#x27;</span>, onClickEvent)</span><br><span class="line">    expect(props.onClose).toBeCalled()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>4.test文件夹下setup.js文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; configure &#125; <span class="keyword">from</span> <span class="string">&#x27;enzyme&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> Adapter <span class="keyword">from</span> <span class="string">&#x27;enzyme-adapter-react-15.4&#x27;</span>;</span><br><span class="line"></span><br><span class="line">configure(&#123; <span class="attr">adapter</span>: <span class="keyword">new</span> Adapter() &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>5.新建文件夹__mocks__增加fileMock文件，以及styleMock.js文件</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2021/08/02/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            OSS断点续传
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2021/08/02/5%E4%B8%AD%E5%B1%95%E7%A4%BA%E5%9C%B0%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">地图展示方法</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.png" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        小小菜鸟
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/08/02/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/">OSS断点续传</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/02/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/02/5%E4%B8%AD%E5%B1%95%E7%A4%BA%E5%9C%B0%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/">地图展示方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/02/%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81JS%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81%E8%BF%9B%E5%8C%96%E7%89%88/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/02/oss%E4%B8%8A%E4%BC%A0/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      <!-- 
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+       -->
+      暂时没有
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    <!-- &copy; 2021 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a> -->
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!-- <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span> -->
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
