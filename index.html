@@ -59,6 +59,230 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-牛客面试题整理" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2022/05/23/%E7%89%9B%E5%AE%A2%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/" class="article-date">
+  <time datetime="2022-05-23T00:44:16.736Z" itemprop="datePublished">2022-05-23</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h5 id="说一说HTNL语义化"><a href="#说一说HTNL语义化" class="headerlink" title="说一说HTNL语义化"></a>说一说HTNL语义化</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">得分点 语义化标签、利于页面内容结构化、利于无CSS页面可读、利于SEO、利于代码可读 标准回答 <span class="selector-tag">HTML</span>语义化就是指在使用<span class="selector-tag">HTML</span>标签构建页面时，避免大篇幅的使用无语义的标签，比如`</span><br><span class="line">`、``，要求尽可能的使用具有语义的标签，比如`</span><br><span class="line">`、`</span><br><span class="line">`、`&lt;<span class="selector-tag">header</span>&gt;`、``、`&lt;<span class="selector-tag">footer</span>&gt;`等。 举例说明： 页面中有一个标题，可以用`&lt;/<span class="selector-tag">footer</span>&gt;&lt;/<span class="selector-tag">header</span>&gt;</span><br><span class="line">`标签实现标题 </span><br><span class="line">This is <span class="selector-tag">a</span> <span class="attribute">top</span> level heading</span><br><span class="line">也可以使用<span class="selector-tag">span</span>+CSS实现标题的样式 Is this <span class="selector-tag">a</span> <span class="attribute">top</span> level heading? 虽然这两种写法都会实现标题的样式，但是建议使用`</span><br><span class="line">`标签实现。 使用<span class="selector-tag">HTML</span>语义化标签的作用： - 易于用户阅读，样式文件未加载时，页面结构清晰。 - 有利于SEO，搜索引擎根据标签来确定上下文和各个关键字的权重。 - 方便屏幕阅读器解析，如盲人阅读器根据语义渲染网页。 - 有利于开发和维护，代码更具可读性，代码更好维护。 加分回答 HTML5语义化标签并没有广泛使用，比如京东、淘宝等，还是使用<span class="selector-tag">div</span>元素，设置id是<span class="selector-tag">header</span>或者<span class="selector-tag">footer</span>，这个可能是因为HTML5新增的语义化标签的作用不是特别大，网站没有必要重写</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="说一说盒模型"><a href="#说一说盒模型" class="headerlink" title="说一说盒模型"></a>说一说盒模型</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">得分点 标准盒模型、怪异盒模型、`<span class="attribute">box-sizing</span>:border-box`、盒模型大小 标准回答 CSS盒模型定义了盒的每个部分包含 margin, border, padding, content 。根据盒子大小的计算方式不同盒模型分成了两种，标准盒模型和怪异盒模型。 标准模型，给盒设置 `width` 和 `height`，实际设置的是 content box。`padding` 和 `border `再加上设置的宽高一起决定整个盒子的大小。 怪异盒模型，给盒设置 `width` 和 `height`，包含了`padding`和`border `，设置的 `width` 和 `height`就是盒子实际的大小 默认情况下，盒模型都是标准盒模型 设置标准盒模型：`box-sizing:content-box` 设置怪异盒模型：`box-sizing:border-box`</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="说一下浮动"><a href="#说一下浮动" class="headerlink" title="说一下浮动"></a>说一下浮动</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">得分点 脱离文档流、盒子塌陷、 影响其他元素排版、伪元素 、`<span class="attribute">overflow</span>:hidden` 、标签插入法 标准回答 浮动的作用，设置浮动的图片，可以实现文字环绕图片，设置了浮动的块级元素可以排列在同一行，设置了浮动的行内元素可以设置宽高，同时可以按照浮动设置的方向对齐排列盒子。 设置浮动元素的特点： -设置了浮动，该元素脱标。元素不占位置 -浮动可以进行模式转换（行内块元素） 浮动造成的影响，使盒子脱离文档流，如果父级盒子没有设置高度，需要被子盒子撑开，那么这时候父级盒子的高度就塌陷了，同时也会造成父级盒子后面的兄弟盒子布局受到影响。如果浮动元素后面还有其他兄弟元素，其他兄弟元素的布局也会受到影响。 清除浮动的方法： -伪元素清除浮动：给浮动元素父级增加 .clearfix::after &#123; content: <span class="string">&#x27;&#x27;</span>; <span class="attribute">display</span>: table; <span class="attribute">clear</span>: both; &#125; <span class="comment">/*兼容IE低版本 */</span> <span class="selector-class">.clearfix</span> &#123; *zoom: <span class="number">1</span>; &#125; <span class="attribute">overflow</span>：hidden`：给浮动元素父级增加`<span class="attribute">overflow</span>：hidden`属性 额外标签法：给浮动元素父级增加标签</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">加分回答 三种清除浮动的特点和影响 -伪元素清除浮动：不会新增标签，不会有其他影响，是当下清除浮动最流行的方法 -`<span class="attribute">overflow</span>：hidden`：不会新增标签，但是如果父级元素有定位元素超出父级，超出部分会隐藏，在不涉及父级元素有超出内容的情况，<span class="attribute">overflow</span>：hidden比较常用，毕竟写法方便简洁 -标签插入法：清除浮动的语法加在新增标签上，由于新增标签会造成不必要的渲染，所以这种方法目前不建议使用</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="样式优先级规则"><a href="#样式优先级规则" class="headerlink" title="样式优先级规则"></a>样式优先级规则</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">得分点 `!important`、行内样式、嵌入样式、外链样式、id选择器、类选择器、标签选择器、复合选择器、通配符、继承样式 标准回答 CSS样式的优先级应该分成四大类 -第一类`!important`，无论引入方式是什么，选择器是什么，它的优先级都是最高的。 -第二类引入方式，行内样式的优先级要高于嵌入和外链，嵌入和外链如果使用的选择器相同就看他们在页面中插入的顺序，在后面插入的会覆盖前面的。 -第三类选择器，选择器优先级：id选择器&gt;（类选择器 | 伪类选择器 | 属性选择器 ）&gt; （后代选择器 | 伪元素选择器 ）&gt; （子选择器 | 相邻选择器） &gt; 通配符选择器 。 -第四类继承样式，是所有样式中优先级比较低的。 -第五类浏览器默认样式优先级最低。 加分回答 使用!important要谨慎 - 一定要优先考虑使用样式规则的优先级来解决问题而不是 `!important` - 只有在需要覆盖全站或外部 CSS 的特定页面中使用 `!important` - 永远不要在你的插件中使用 `!important` - 永远不要在全站范围的 CSS 代码中使用 `!important` 优先级的比较指的是相同的样式属性，不同样式属性优先级比较失效，比如：在设置`max-width`时注意，已经给元素的`max-width`设置了`!important`但是还不生效，很有可能就是被width覆盖了 举例：`div`最终的宽度还是`200px` div &#123; max-width: 400px !important; height: 200px;background-color: tomato; width: 200px; &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="Css-尺寸"><a href="#Css-尺寸" class="headerlink" title="Css 尺寸"></a>Css 尺寸</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">得分点 px、rem、<span class="selector-tag">em</span>、vw、vh 标准回答 px：pixel像素的缩写，绝对长度单位，它的大小取决于屏幕的分辨率，是开发网页中常常使用的单位。 <span class="selector-tag">em</span>：相对长度单位，在 `<span class="attribute">font-size</span>` 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 <span class="attribute">width</span>。如当前元素的字体尺寸未设置，由于字体大小可继承的原因，可逐级向上查找，最终找不到则相对于浏览器默认字体大小。 rem：相对长度单位，相对于根元素的字体大小，根元素字体大小未设置，使用浏览器默认字体大小。 vw：相对长度单位，相对于视窗宽度的<span class="number">1%</span>。 vh：相对长度单位，相对于视窗高度的<span class="number">1%</span>。 加分回答 rem应用：在移动端网页开发中，页面要做成响应式的，可使用rem配合媒体查询或者flexible<span class="selector-class">.js</span>实现。原理是通过媒体查询或者flexible<span class="selector-class">.js</span>，能够在屏幕尺寸发生改变时，重置<span class="selector-tag">html</span>根元素的字体大小，页面中的元素都是使用rem为单位设置的尺寸，因此只要改变根元素字体大小，页面中的其他元素的尺寸就自动跟着修改 vw应用：由于vw被更多浏览器兼容之后，在做移动端响应式页面时，通常使用vw配合rem。原理是使用vw设置根元素<span class="selector-tag">html</span>字体的大小，当窗口大小发生改变，vw代表的尺寸随着修改，无需加入媒体查询和flexible<span class="selector-class">.js</span>，页面中的其他元素仍使用rem为单位，就可实现响应式。</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="说一说BFC"><a href="#说一说BFC" class="headerlink" title="说一说BFC"></a>说一说BFC</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">得分点 块级格式化上下文、独立的渲染区域、不会影响边界以外的元素、形成BFC条件、<span class="attribute">float</span>、<span class="attribute">position</span>、<span class="attribute">overflow</span>、<span class="attribute">display</span> 标准回答 BFC(Block Formatting Context)块级格式化上下文，是Web页面一块独立的渲染区域，内部元素的渲染不会影响边界以外的元素。 BFC布局规则 -内部盒子会在垂直方向，一个接一个地放置。 -Box垂直方向的距离由<span class="attribute">margin</span>决定。属于同一个BFC的两个相邻Box的<span class="attribute">margin</span>会发生重叠。 -每个盒子（块盒与行盒）的<span class="attribute">margin</span> box的左边，与包含块<span class="attribute">border</span> box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。 -BFC的区域不会与<span class="attribute">float</span> box重叠。 -BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。 -计算BFC的高度时，浮动元素也参与计算。 BFC形成的条件 -`<span class="attribute">float</span> `设置成 `<span class="attribute">left</span> `或 `<span class="attribute">right</span>` -`<span class="attribute">position</span> `是`absolute`或者`fixed` -`<span class="attribute">overflow</span> `不是`visible`，为 `<span class="attribute">auto</span>`、`scroll`、`hidden` -`<span class="attribute">display</span>`是`<span class="attribute">flex</span>`或者`inline-block` 等 BFC解决能的问题：清除浮动 加分回答 BFC的方式都能清除浮动，但是常使用的清除浮动的BFC方式只有`<span class="attribute">overflow</span>:hidden`,原因是使用float或者position方式清除浮动，虽然父级盒子内部浮动被清除了，但是父级本身又脱离文档流了，会对父级后面的兄弟盒子的布局造成影响。如果设置父级为`display:flex`，内部的浮动就会失效。所以通常只是用`overflow: hidden`清除浮动。 IFC（Inline formatting contexts）：内联格式上下文。IFC的高度由其包含行内元素中最高的实际高度计算而来（不受到竖直方向的padding/margin影响)，IFC中的line box一般左右都贴紧整个IFC，但是会因为float元素而扰乱。 GFC（GrideLayout formatting contexts）：网格布局格式化上下文。当为一个元素设置display值为grid的时候，此元素将会获得一个独立的渲染区域。 FFC（Flex formatting contexts）：自适应格式上下文。display值为flex或者inline-flex的元素将会生成自适应容器。</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="未知高度水平垂直居中"><a href="#未知高度水平垂直居中" class="headerlink" title="未知高度水平垂直居中"></a>未知高度水平垂直居中</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">得分点</span><br><span class="line"></span><br><span class="line">`<span class="attribute">position</span>` `<span class="attribute">transform</span>` `<span class="attribute">flex</span>` `<span class="attribute">justify-content</span>` `<span class="attribute">align-items</span>` `<span class="attribute">vertical-align</span>` `<span class="attribute">text-align</span>`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">标准回答</span><br><span class="line">未知宽高元素水平垂直都居中的实现方法：</span><br><span class="line"><span class="number">1</span>. 设置元素相对父级定位`<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:<span class="number">50%</span>;<span class="attribute">right</span>:<span class="number">50%</span>`，让自身平移自身高度<span class="number">50%</span> `transform: <span class="built_in">translate</span>(-<span class="number">50%</span>,-<span class="number">50%</span>);`，这种方式兼容性好，被广泛使用的一种方式</span><br><span class="line"><span class="number">2</span>. 设置元素的父级为弹性盒子`<span class="attribute">display</span>:flex`，设置父级和盒子内部子元素水平垂直都居中`justify-content:center; <span class="attribute">align-items</span>:center` ，这种方式代码简洁，但是兼容性ie <span class="number">11</span>以上支持，由于目前ie版本都已经很高，很多网站现在也使用这种方式实现水平垂直居中</span><br><span class="line"><span class="number">3</span>. 设置元素的父级为网格元素`display: grid`，设置父级和盒子内部子元素水平垂直都居中`justify-content:center; <span class="attribute">align-items</span>:center` ，这种方式代码简介，但是兼容性ie <span class="number">10</span>以上支持</span><br><span class="line"><span class="number">4</span>. 设置元素的父级为表格元素`display: table-cell`，其内部元素水平垂直都居中`text-align: center;<span class="attribute">vertical-align</span>: middle;` ，设置子元素为行内块`<span class="attribute">display</span>: inline-block; `，这种方式兼容性较好</span><br><span class="line"></span><br><span class="line">加分回答</span><br><span class="line">京东的移动端顶部京东logo，使用的是`<span class="attribute">display</span>:flex`这种模式</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="说说三栏布局实现方案"><a href="#说说三栏布局实现方案" class="headerlink" title="说说三栏布局实现方案"></a>说说三栏布局实现方案</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">得分点 圣杯布局、双飞翼布局、三栏高度不定、中间栏内容多先渲染 标准回答 三栏布局，要求左右两边盒子宽度固定，中间盒子宽度自适应，盒子的高度都是随内容撑高的，一般都是中间盒子内容较多，为了保证页面渲染快，在写结构的时候，需要把中间盒子放在左右盒子的前面。 实现三栏布局的方法通常是圣杯布局和双飞翼布局。 圣杯布局的实现方案：三个元素放在同一个父级元素中，代表中间盒子的元素放在最前面，父级盒子设置左右`<span class="attribute">padding</span>`，三个盒子全部浮动，设置中间盒子宽度<span class="number">100%</span>，左右盒子设置固定宽度，设置左边盒子左边距-<span class="number">100%</span>同时相对自身定位，右边平移自身宽度，右边盒子设置右边距-自身宽度，最后设置父级盒子清除浮动，否则父级盒子的高度无法被撑开 双飞翼布局的实现方案：三个盒子对应三个元素，其中中间盒子套了两层，中间盒子内部盒子设置`<span class="attribute">margin</span>`,三个盒子全部浮动，设置中间盒子宽度<span class="number">100%</span>，左右盒子设置固定宽度,设置左边盒子左边距-<span class="number">100%</span>,右边盒子设置右边距-自身宽度，最后设置父级盒子清除浮动，否则父级盒子的高度无法被撑开 加分回答 圣杯布局: - 优点：不需要添加dom节点 - 缺点：正常情况下是没有问题的，但是特殊情况下就会暴露此方案的弊端，当middle部分的宽小于left部分时就会发生布局混乱。 双飞翼布局： - 优点：不会像圣杯布局那样变形，CSS样式代码更简洁 - 缺点：多加了一层dom节点</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="JS数据类型"><a href="#JS数据类型" class="headerlink" title="JS数据类型"></a>JS数据类型</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">得分点</span><br><span class="line"><span class="built_in">Number</span>、<span class="built_in">String</span>、<span class="built_in">Boolean</span>、BigInt、<span class="built_in">Symbol</span>、Null、Undefined、<span class="built_in">Object</span>、<span class="number">8</span>种</span><br><span class="line"></span><br><span class="line">标准回答</span><br><span class="line">JS数据类型分为两类：一类是基本数据类型，也叫简单数据类型，包含<span class="number">7</span>种类型，分别是<span class="built_in">Number</span> 、<span class="built_in">String</span>、<span class="built_in">Boolean</span>、BigInt、<span class="built_in">Symbol</span>、Null、Undefined。另一类是引用数据类型也叫复杂数据类型，通常用<span class="built_in">Object</span>代表，普通对象，数组，正则，日期，<span class="built_in">Math</span>数学函数都属于<span class="built_in">Object</span>。</span><br><span class="line"></span><br><span class="line">数据分成两大类的本质区别：基本数据类型和引用数据类型它们在内存中的存储方式不同。</span><br><span class="line">基本数据类型是直接存储在栈中的简单数据段，占据空间小，属于被频繁使用的数据。</span><br><span class="line">引用数据类型是存储在堆内存中，占据空间大。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，当解释器寻找引用值时，会检索其在栈中的地址，取得地址后从堆中获得实体。</span><br><span class="line"></span><br><span class="line">加分回答</span><br><span class="line"><span class="built_in">Symbol</span>是ES6新出的一种数据类型，这种数据类型的特点就是没有重复的数据，可以作为object的key。</span><br><span class="line">数据的创建方法<span class="built_in">Symbol</span>()，因为它的构造函数不够完整，所以不能使用<span class="keyword">new</span> <span class="built_in">Symbol</span>()创建数据。由于<span class="built_in">Symbol</span>()创建数据具有唯一性，所以 <span class="built_in">Symbol</span>() !== <span class="built_in">Symbol</span>(), 同时使用<span class="built_in">Symbol</span>数据作为key不能使用<span class="keyword">for</span>获取到这个key，需要使用<span class="built_in">Object</span>.getOwnPropertySymbols(obj)获得这个obj对象中key类型是<span class="built_in">Symbol</span>的key值。</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> key = <span class="built_in">Symbol</span>(<span class="string">&#x27;key&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> obj = &#123; [key]: <span class="string">&#x27;symbol&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> keyArray = <span class="built_in">Object</span>.getOwnPropertySymbols(obj); <span class="comment">// 返回一个数组[Symbol(&#x27;key&#x27;)]</span></span><br><span class="line">obj[keyArray[<span class="number">0</span>]] <span class="comment">// &#x27;symbol&#x27;</span></span><br><span class="line"></span><br><span class="line">BigInt也是ES6新出的一种数据类型，这种数据类型的特点就是数据涵盖的范围大，能够解决超出普通数据类型范围报错的问题。</span><br><span class="line"></span><br><span class="line">使用方法：</span><br><span class="line">-整数末尾直接+n：<span class="number">647326483767797n</span></span><br><span class="line">-调用BigInt()构造函数：BigInt(<span class="string">&quot;647326483767797&quot;</span>)</span><br><span class="line"></span><br><span class="line">注意：BigInt和<span class="built_in">Number</span>之间不能进行混合操作</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h5><h5 id="伪数组和数组的区别"><a href="#伪数组和数组的区别" class="headerlink" title="伪数组和数组的区别"></a>伪数组和数组的区别</h5><h5 id="map和forEach-区别"><a href="#map和forEach-区别" class="headerlink" title="map和forEach 区别"></a>map和forEach 区别</h5><h5 id="说说ES6-中的箭头函数"><a href="#说说ES6-中的箭头函数" class="headerlink" title="说说ES6 中的箭头函数"></a>说说ES6 中的箭头函数</h5><h5 id="事件扩展符…"><a href="#事件扩展符…" class="headerlink" title="事件扩展符…"></a>事件扩展符…</h5><h5 id="闭包的理解"><a href="#闭包的理解" class="headerlink" title="闭包的理解"></a>闭包的理解</h5><h5 id="JS变量提升"><a href="#JS变量提升" class="headerlink" title="JS变量提升"></a>JS变量提升</h5><h5 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h5><h5 id="call-apply-bind-作用和区别"><a href="#call-apply-bind-作用和区别" class="headerlink" title="call apply bind 作用和区别"></a>call apply bind 作用和区别</h5><h5 id="JS继承的方法和优缺点"><a href="#JS继承的方法和优缺点" class="headerlink" title="JS继承的方法和优缺点"></a>JS继承的方法和优缺点</h5><h5 id="new会发生什么"><a href="#new会发生什么" class="headerlink" title="new会发生什么"></a>new会发生什么</h5><h5 id="Defer-和async-区别"><a href="#Defer-和async-区别" class="headerlink" title="Defer 和async 区别"></a>Defer 和async 区别</h5><h5 id="promise是什么，作用方法"><a href="#promise是什么，作用方法" class="headerlink" title="promise是什么，作用方法"></a>promise是什么，作用方法</h5><h5 id="JS实现异步的方法"><a href="#JS实现异步的方法" class="headerlink" title="JS实现异步的方法"></a>JS实现异步的方法</h5><h5 id="Cookie-sessionStorage-和localStorage区别"><a href="#Cookie-sessionStorage-和localStorage区别" class="headerlink" title="Cookie  sessionStorage 和localStorage区别"></a>Cookie  sessionStorage 和localStorage区别</h5><h5 id="如何实现过期的localStorage数据"><a href="#如何实现过期的localStorage数据" class="headerlink" title="如何实现过期的localStorage数据"></a>如何实现过期的localStorage数据</h5><h5 id="token-能放在cookie中吗"><a href="#token-能放在cookie中吗" class="headerlink" title="token 能放在cookie中吗"></a>token 能放在cookie中吗</h5><h5 id="axios拦截原理及应用"><a href="#axios拦截原理及应用" class="headerlink" title="axios拦截原理及应用"></a>axios拦截原理及应用</h5><h5 id="创建ajax的过程"><a href="#创建ajax的过程" class="headerlink" title="创建ajax的过程"></a>创建ajax的过程</h5><h5 id="fetch请求方式"><a href="#fetch请求方式" class="headerlink" title="fetch请求方式"></a>fetch请求方式</h5><h5 id="什么方式可以保持前后端实时通信"><a href="#什么方式可以保持前后端实时通信" class="headerlink" title="什么方式可以保持前后端实时通信"></a>什么方式可以保持前后端实时通信</h5><h5 id="说说浏览器输入发生了什么"><a href="#说说浏览器输入发生了什么" class="headerlink" title="说说浏览器输入发生了什么"></a>说说浏览器输入发生了什么</h5><p>浏览器如何渲染页面</p>
+<p>说说重绘、重排区别如何避免</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-css3多列布局" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2022/05/19/css3%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2022-05-19T02:48:59.503Z" itemprop="datePublished">2022-05-19</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">column-count</span>	指定元素应该被分割的列数。</span><br><span class="line"><span class="attribute">column-fill</span>	指定如何填充列</span><br><span class="line"><span class="attribute">column-gap</span>	指定列与列之间的间隙</span><br><span class="line"><span class="attribute">column-rule</span>	所有 <span class="attribute">column-rule</span>-* 属性的简写</span><br><span class="line"><span class="attribute">column-rule-color</span>	指定两列间边框的颜色</span><br><span class="line"><span class="attribute">column-rule-style</span>	指定两列间边框的样式</span><br><span class="line"><span class="attribute">column-rule-width</span>	指定两列间边框的厚度</span><br><span class="line"><span class="attribute">column-span</span>	指定元素要跨越多少列</span><br><span class="line"><span class="attribute">column-width</span>	指定列的宽度</span><br><span class="line"><span class="attribute">columns</span>	<span class="attribute">column-width</span> 与 <span class="attribute">column-count</span> 的简写属性。</span><br></pre></td></tr></table></figure></div>
+
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-css3" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2022/05/14/css3/" class="article-date">
+  <time datetime="2022-05-14T01:33:52.562Z" itemprop="datePublished">2022-05-14</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h6 id="1-文本阴影"><a href="#1-文本阴影" class="headerlink" title="1.文本阴影"></a>1.文本阴影</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="2-背景属性"><a href="#2-背景属性" class="headerlink" title="2.背景属性"></a>2.背景属性</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.background-origin</span> 背景原点</span><br><span class="line">		属性值 <span class="attribute">padding</span>-bx背景图像填充框的相对位置</span><br><span class="line">					<span class="attribute">border</span>-box 背景图像框的相对位置</span><br><span class="line">					<span class="attribute">content</span>-box 背景图像的相对位置的内容框</span><br><span class="line"><span class="number">2</span><span class="selector-class">.background-clip</span>背景裁切</span><br><span class="line">		属性值 <span class="attribute">padding</span>-bx</span><br><span class="line">					<span class="attribute">border</span>-box</span><br><span class="line">					<span class="attribute">content</span>-box</span><br><span class="line"><span class="number">3</span><span class="selector-class">.background-size</span>背景尺寸</span><br><span class="line">		属性值 </span><br><span class="line">		<span class="attribute">background-size</span> : contain | cover | <span class="number">100px</span> <span class="number">100px</span> | <span class="number">50%</span> <span class="number">100%</span>;</span><br><span class="line">		<span class="attribute">background-size</span>：contain; // 缩⼩图⽚来适应元素的尺⼨（保持像素的长宽⽐）；</span><br><span class="line">    <span class="attribute">background-size</span> ：cover; // 扩展图⽚来填满元素（保持像素的长宽⽐）；</span><br><span class="line">    <span class="attribute">background-size</span> ：<span class="number">100px</span> <span class="number">100px</span>; // 调整图⽚到指定⼤⼩；</span><br><span class="line">    <span class="attribute">background-size</span> ：<span class="number">50%</span> <span class="number">100%</span>; // 调整图⽚到指定⼤⼩，百分⽐相对于包含元素的尺⼨。</span><br><span class="line"><span class="number">4</span><span class="selector-class">.background</span>:<span class="built_in">url</span>() no-repeat;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="3-颜色特性"><a href="#3-颜色特性" class="headerlink" title="3.颜色特性"></a>3.颜色特性</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.rgba</span></span><br><span class="line"><span class="number">2</span><span class="selector-class">.hsl</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="4-边框属性"><a href="#4-边框属性" class="headerlink" title="4.边框属性"></a>4.边框属性</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.border-color</span></span><br><span class="line"><span class="number">2</span><span class="selector-class">.border-image</span>:<span class="built_in">url</span>() <span class="number">25</span> <span class="number">25</span> <span class="number">25</span> <span class="number">25</span> repeat;</span><br><span class="line"> 	<span class="attribute">border-image</span> 属性是简写属性，用于设置一下属性</span><br><span class="line">  <span class="attribute">border-image-source</span> 边框图片路径</span><br><span class="line">  <span class="attribute">border-image-slice</span> 图片边框向内偏移</span><br><span class="line">  <span class="attribute">border-image-repeat</span> 图像边框是否平移（repaet） 铺满（round）拉伸（stretch）</span><br><span class="line">  <span class="attribute">border-image-outset</span> 边框图片路径</span><br><span class="line"><span class="number">3</span><span class="selector-class">.border-radius</span></span><br><span class="line"><span class="number">4</span><span class="selector-class">.box-shadow</span>:<span class="number">10px</span> <span class="number">10px</span> <span class="number">5px</span> <span class="number">10px</span> <span class="number">#888888</span> inset</span><br><span class="line">						水平  垂直 模糊距离 阴影大小</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="5-css3弹性盒子"><a href="#5-css3弹性盒子" class="headerlink" title="5.css3弹性盒子"></a>5.css3弹性盒子</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.display</span>:flex;</span><br><span class="line"><span class="number">2</span><span class="selector-class">.flex-direction</span>:中轴排列方式</span><br><span class="line">	row 默认一行排列</span><br><span class="line">	row-reverse  反转 横向排列</span><br><span class="line">	column	纵向排列</span><br><span class="line">	column-reverse 反转纵向排列</span><br><span class="line"><span class="number">3</span>.justify-content；主轴对齐方式</span><br><span class="line">	flex-start默认顶端对齐</span><br><span class="line">	flex-end 末端对齐</span><br><span class="line">	spece-between</span><br><span class="line">	spece-around</span><br><span class="line"><span class="number">4</span>.align-items 侧轴对齐方式</span><br><span class="line">	flex-start</span><br><span class="line">	flex-end</span><br><span class="line">	center</span><br><span class="line">	baseline 和start同效果</span><br><span class="line"><span class="number">5</span>.flex-wrap 控制flex容器是单行还是多行</span><br><span class="line">	nowrap 单行</span><br><span class="line">	wrap 多行</span><br><span class="line">	wrap-reverse 反转wrap排列</span><br><span class="line"><span class="number">6</span>.align-content 行与行之间的对齐方式</span><br><span class="line">	flex-statr没有行间距</span><br><span class="line">	flex-end底对齐没有行间距</span><br><span class="line">	space-between两端对齐中间自动分配</span><br><span class="line">	space-around 自动分配距离</span><br><span class="line"><span class="number">7</span>.align-self</span><br><span class="line">	auto</span><br><span class="line">	stretch</span><br><span class="line">	center</span><br><span class="line">	flex-end</span><br></pre></td></tr></table></figure></div>
+
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-css选择器" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2022/05/13/css%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
+  <time datetime="2022-05-13T14:29:48.408Z" itemprop="datePublished">2022-05-13</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h6 id="1-层级选择器"><a href="#1-层级选择器" class="headerlink" title="1.层级选择器"></a>1.层级选择器</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E&gt;F 子选择器</span><br><span class="line">E+F 相邻兄弟选择器</span><br><span class="line">E^F 通用选择器</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2022/05/13/css%E9%80%89%E6%8B%A9%E5%99%A8/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-html_智能表单" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2022/05/13/html_%E6%99%BA%E8%83%BD%E8%A1%A8%E5%8D%95/" class="article-date">
+  <time datetime="2022-05-13T14:17:17.929Z" itemprop="datePublished">2022-05-13</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h5 id="Html-智能表单"><a href="#Html-智能表单" class="headerlink" title="Html_智能表单"></a>Html_智能表单</h5>
+        
+          <p class="article-more-link">
+            <a href="/2022/05/13/html_%E6%99%BA%E8%83%BD%E8%A1%A8%E5%8D%95/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-地图打点" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/30/%E5%9C%B0%E5%9B%BE%E6%89%93%E7%82%B9/">地图打点</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2022/04/30/%E5%9C%B0%E5%9B%BE%E6%89%93%E7%82%B9/" class="article-date">
+  <time datetime="2022-04-29T16:21:17.994Z" itemprop="datePublished">2022-04-30</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>地图打点</p>
+<h5 id="1-正常打点"><a href="#1-正常打点" class="headerlink" title="1.正常打点"></a>1.正常打点</h5>
+        
+          <p class="article-more-link">
+            <a href="/2022/04/30/%E5%9C%B0%E5%9B%BE%E6%89%93%E7%82%B9/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-总结2" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
   <div class="article-meta">
@@ -202,242 +426,11 @@
 </article>
 
   
-    <article id="post-定位" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/02/%E5%AE%9A%E4%BD%8D/">定位</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2021/08/02/%E5%AE%9A%E4%BD%8D/" class="article-date">
-  <time datetime="2021-08-02T14:24:23.000Z" itemprop="datePublished">2021-08-02</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/02/%E5%AE%9A%E4%BD%8D/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-断点续传" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/02/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/">OSS断点续传</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2021/08/02/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/" class="article-date">
-  <time datetime="2021-08-02T14:24:23.000Z" itemprop="datePublished">2021-08-02</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="OSS断点续传"><a href="#OSS断点续传" class="headerlink" title="OSS断点续传"></a>OSS断点续传</h1>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/02/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-PicGo+gitee图床" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-  <div class="article-meta">
-    <a href="/2021/08/01/PicGo+gitee%E5%9B%BE%E5%BA%8A/" class="article-date">
-  <time datetime="2021-08-01T13:20:16.727Z" itemprop="datePublished">2021-08-01</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="PicGo-gitee图床"><a href="#PicGo-gitee图床" class="headerlink" title="PicGo+gitee图床"></a>PicGo+gitee图床</h1><p>写博客中发现Typora本地图片没发显示，所以找到了图床的方式上传图片，以下来介绍一下怎么使用</p>
-<h3 id="1-gitee注册–创建仓库–生成私人令牌"><a href="#1-gitee注册–创建仓库–生成私人令牌" class="headerlink" title="1.gitee注册–创建仓库–生成私人令牌"></a>1.gitee注册–创建仓库–生成私人令牌</h3><h4 id="注册gitee-新建仓库"><a href="#注册gitee-新建仓库" class="headerlink" title="注册gitee-新建仓库"></a>注册gitee-新建仓库</h4>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/01/PicGo+gitee%E5%9B%BE%E5%BA%8A/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-CND数据获取" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/01/CND%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/">CDN数据</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2021/08/01/CND%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/" class="article-date">
-  <time datetime="2021-08-01T06:24:23.000Z" itemprop="datePublished">2021-08-01</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="CDN数据"><a href="#CDN数据" class="headerlink" title="CDN数据"></a>CDN数据</h1>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/01/CND%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-H5定位" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/01/H5%E5%AE%9A%E4%BD%8D/">定位</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2021/08/01/H5%E5%AE%9A%E4%BD%8D/" class="article-date">
-  <time datetime="2021-08-01T06:24:23.000Z" itemprop="datePublished">2021-08-01</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/01/H5%E5%AE%9A%E4%BD%8D/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-React项目打包发布npm步骤1" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/01/React%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83npm%E6%AD%A5%E9%AA%A41/">React项目打包发布npm步骤</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2021/08/01/React%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83npm%E6%AD%A5%E9%AA%A41/" class="article-date">
-  <time datetime="2021-08-01T06:24:23.000Z" itemprop="datePublished">2021-08-01</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="React项目打包发布npm步骤"><a href="#React项目打包发布npm步骤" class="headerlink" title="React项目打包发布npm步骤"></a>React项目打包发布npm步骤</h1>
-        
-          <p class="article-more-link">
-            <a href="/2021/08/01/React%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83npm%E6%AD%A5%E9%AA%A41/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
   </nav>
 
 
@@ -472,7 +465,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
     </div>
   </div>
 
@@ -484,23 +477,23 @@
       <ul>
         
           <li>
-            <a href="/2022/03/17/%E6%80%BB%E7%BB%932/">(no title)</a>
+            <a href="/2022/05/23/%E7%89%9B%E5%AE%A2%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2022/03/16/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">(no title)</a>
+            <a href="/2022/05/19/css3%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2021/08/02/5%E4%B8%AD%E5%B1%95%E7%A4%BA%E5%9C%B0%E5%9B%BE%E7%9A%84%E6%96%B9%E6%B3%95/">地图展示方法</a>
+            <a href="/2022/05/14/css3/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2021/08/02/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a>
+            <a href="/2022/05/13/css%E9%80%89%E6%8B%A9%E5%99%A8/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2021/08/02/%E5%AE%9A%E4%BD%8D/">定位</a>
+            <a href="/2022/05/13/html_%E6%99%BA%E8%83%BD%E8%A1%A8%E5%8D%95/">(no title)</a>
           </li>
         
       </ul>
