@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>屏幕分辨率适配 | 小小菜鸟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="分辨率适配1.自适应布局通过设置屏幕宽高百分比来进行自适应 缺点：屏幕过小内容看起来会很拥挤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="屏幕分辨率适配">
+<meta property="og:url" content="http://example.com/2022/12/01/%E5%88%86%E8%BE%A8%E7%8E%87%E9%80%82%E9%85%8D/index.html">
+<meta property="og:site_name" content="小小菜鸟的博客">
+<meta property="og:description" content="分辨率适配1.自适应布局通过设置屏幕宽高百分比来进行自适应 缺点：屏幕过小内容看起来会很拥挤">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-01T06:24:23.000Z">
+<meta property="article:modified_time" content="2023-04-17T04:52:44.787Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="小小菜鸟的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-分辨率适配" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      屏幕分辨率适配
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2022/12/01/%E5%88%86%E8%BE%A8%E7%8E%87%E9%80%82%E9%85%8D/" class="article-date">
+  <time datetime="2022-12-01T06:24:23.000Z" itemprop="datePublished">2022-12-01</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="分辨率适配"><a href="#分辨率适配" class="headerlink" title="分辨率适配"></a>分辨率适配</h1><h3 id="1-自适应布局"><a href="#1-自适应布局" class="headerlink" title="1.自适应布局"></a>1.自适应布局</h3><p>通过设置屏幕宽高百分比来进行自适应</p>
+<p>缺点：屏幕过小内容看起来会很拥挤</p>
+<span id="more"></span>
+
+<h3 id="2-响应式布局"><a href="#2-响应式布局" class="headerlink" title="2.响应式布局"></a>2.响应式布局</h3><p>通过css设置@media,让css获取屏幕的大小来设置不同的宽高，适应不同的屏幕</p>
+<p>缺点：IE9一下不支持css3</p>
+<p>代码示例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">1201px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  	<span class="attribute">width</span>: <span class="number">1200px</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">1200px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  	<span class="attribute">width</span>: <span class="number">1200px</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>需要注意是CSS代码顺序，由大到小排版CSS（判断浏览器宽度越大越放前），这样是因为逻辑关系，@media 判断CSS排错将导致判断失效。</p>
+<p>为兼容IE9以下需要加入一个google的JS</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></span><br><span class="line"><span class="comment">&lt;script src=&quot;http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="3-transform-scale"><a href="#3-transform-scale" class="headerlink" title="3.transform:scale()"></a>3.transform:scale()</h3><p>可以用js获取页面宽度，然后对元素进行缩放，这样内容也会随着缩放，但是元素所占的位置没有改变，transform会影响画布上的视觉布局，不会影响css布局本身，只是引起页面重绘。</p>
+<h3 id="4-rem布局"><a href="#4-rem布局" class="headerlink" title="4.rem布局"></a>4.rem布局</h3><p>rem根据页面的根节点的字体大小进行转变。作法与手机一致，利用js动态计算页面宽度在设定根元素的字体大小。</p>
+<h3 id="5-根据不同分辨率加载css文件"><a href="#5-根据不同分辨率加载css文件" class="headerlink" title="5.根据不同分辨率加载css文件"></a>5.根据不同分辨率加载css文件</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 分辨率大于等于1680，大部分为1920的情况下，调用此css</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.screen.width &gt;= <span class="number">1680</span>)&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">&#x27;&lt;link rel=&quot;stylesheet&quot; href=&quot;css/index_1920.css&quot;&gt;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 分辨率再在1600-1680的情况下，调用此css</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.screen.width &gt;= <span class="number">1600</span>)&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">&#x27;&lt;link rel=&quot;stylesheet&quot; href=&quot;css/index_1600.css&quot;&gt;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 分辨率小于1600的情况下，调用此css</span></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">&#x27;&lt;link rel=&quot;stylesheet&quot; href=&quot;css/index.css&quot;&gt;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-媒体查询"><a href="#6-媒体查询" class="headerlink" title="6.媒体查询"></a>6.媒体查询</h3><p>和第五种方式类似</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 分辨率低于1280，采用test-01.css样式表 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (max-device-width:1280px)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;test-01.css&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 分辨率高于1400，采用test-02.css样式表 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (min-device-width:1440px)&quot;</span> <span class="attr">href</span>=<span class="string">&quot;test-02.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2023/02/15/%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E6%98%BE%E7%A4%BA%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%90%8D%E7%A7%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            网页在微信中分享，分享图片及名称的显示
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2022/06/01/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B8%B2%E6%9F%93%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">服务器渲染和客户端渲染</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.png" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        小小菜鸟
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/04/01/React%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83npm%E6%AD%A5%E9%AA%A41/">React项目打包发布npm步骤</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/15/%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E6%98%BE%E7%A4%BA%E5%9B%BE%E6%A0%87%E5%8F%8A%E5%90%8D%E7%A7%B0/">网页在微信中分享，分享图片及名称的显示</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/01/%E5%88%86%E8%BE%A8%E7%8E%87%E9%80%82%E9%85%8D/">屏幕分辨率适配</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/01/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B8%B2%E6%9F%93%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93/">服务器渲染和客户端渲染</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/14/css3/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      <!-- 
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+       -->
+      暂时没有
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    <!-- &copy; 2023 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a> -->
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!-- <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span> -->
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
